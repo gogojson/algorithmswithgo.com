@@ -1,6 +1,7 @@
-package module01
+package module01_test
 
 import (
+	"algo/module01"
 	"fmt"
 	"testing"
 )
@@ -40,7 +41,7 @@ func TestNumInList(t *testing.T) {
 	}
 	for _, tc := range tests {
 		t.Run(fmt.Sprintf("(%v,%v)", tc.list, tc.num), func(t *testing.T) {
-			got := NumInList(tc.list, tc.num)
+			got := module01.NumInList(tc.list, tc.num)
 			if got != tc.want {
 				t.Fatalf("NumInList() = %v; want %v", got, tc.want)
 			}
