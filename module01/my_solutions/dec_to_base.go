@@ -10,10 +10,10 @@ package module01
 //	DecToBase(14, 2) => "1110"
 func DecToBase(dec, base int) string {
 	result := ""
-	hexL := []string{"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"}
+	hexL := "0123456789ABCDEF"
 
 	for {
-		result = hexL[dec%base] + result
+		result = string(hexL[dec%base]) + result
 		dec = dec / base
 		if dec == 0 {
 			break
