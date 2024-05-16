@@ -16,9 +16,8 @@ import (
 // I wouldn't normally recommend this, but did
 // it here to make life easier for beginners.
 func FizzBuzz(n int) {
-	fmt.Println("Start!")
 	var result string
-	for i := 0; i < n; i++ {
+	for i := 1; i <= n; i++ {
 		switch {
 		case i%3 == 0 && i%5 == 0:
 			result = result + "Fizz Buzz"
@@ -30,7 +29,8 @@ func FizzBuzz(n int) {
 			result = result + fmt.Sprint(i)
 
 		}
-		if i != n-1 {
+
+		if i != n {
 			result = result + ", "
 		}
 

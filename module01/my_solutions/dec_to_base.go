@@ -6,9 +6,18 @@ package module01
 //
 // Eg:
 //
-//   DecToBase(14, 16) => "E"
-//   DecToBase(14, 2) => "1110"
-//
+//	DecToBase(14, 16) => "E"
+//	DecToBase(14, 2) => "1110"
 func DecToBase(dec, base int) string {
-	return ""
+	result := ""
+	hexL := "0123456789ABCDEF"
+
+	for {
+		result = string(hexL[dec%base]) + result
+		dec = dec / base
+		if dec == 0 {
+			break
+		}
+	}
+	return result
 }
